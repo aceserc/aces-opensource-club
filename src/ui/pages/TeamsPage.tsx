@@ -1,55 +1,9 @@
-
-import Header from "../components/Header"
-import { Card, CardContent } from "@shadcn/ui/card"
-import { Button } from "@shadcn/ui/button"
-import Footer from "../components/Footer"
-import { Badge } from "@shadcn/ui/badge"
-
-interface TeamMember {
-  name: string
-  role: string
-  image: string
-  description: string
-}
-
-const teamMembers: TeamMember[] = [
-  {
-    name: "Alex Johnson",
-    role: "President",
-    image: "/placeholder.svg?height=400&width=400",
-    description: "Alex leads our club with vision and dedication, ensuring we meet our goals."
-  },
-  {
-    name: "Samantha Lee",
-    role: "Vice President",
-    image: "/placeholder.svg?height=400&width=400",
-    description: "Samantha oversees our projects and helps coordinate our various initiatives."
-  },
-  {
-    name: "Michael Chen",
-    role: "Treasurer",
-    image: "/placeholder.svg?height=400&width=400",
-    description: "Michael manages our finances and ensures we have the resources for our activities."
-  },
-  {
-    name: "Emily Rodriguez",
-    role: "Events Coordinator",
-    image: "/placeholder.svg?height=400&width=400",
-    description: "Emily brings creativity and energy to our event planning and execution."
-  },
-  {
-    name: "David Okonkwo",
-    role: "Outreach Officer",
-    image: "/placeholder.svg?height=400&width=400",
-    description: "David builds strong relationships with our community partners and stakeholders."
-  },
-  {
-    name: "Lisa Tanaka",
-    role: "Technology Lead",
-    image: "/placeholder.svg?height=400&width=400",
-    description: "Lisa keeps us at the forefront of technological advancements in our field."
-  }
-]
+import Header from "../components/Header";
+import { Card, CardContent } from "@shadcn/ui/card";
+import { Button } from "@shadcn/ui/button";
+import Footer from "../components/Footer";
+import { Badge } from "@shadcn/ui/badge";
+import { teamMembers } from "../../data/teamData";
 
 export default function TeamPage() {
   return (
@@ -95,5 +49,5 @@ export default function TeamPage() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }

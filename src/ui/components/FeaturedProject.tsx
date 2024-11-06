@@ -1,5 +1,6 @@
-import { Button } from '@shadcn/ui/button'
-import { Link } from 'react-router-dom'
+import { Button } from '@shadcn/ui/button';
+import { Link } from 'react-router-dom';
+import { featuredProjects } from '../../data/featuredProjectData';
 
 const FeaturedProject = () => {
   return (
@@ -9,58 +10,28 @@ const FeaturedProject = () => {
           Featured Projects
         </h2>
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
-            <img
-              src="/placeholder.svg"
-              alt="Project 1"
-              width={400}
-              height={200}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2 text-indigo-600 dark:text-indigo-400">Open Source CMS</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">A flexible content management system built with modern web technologies.</p>
-              <Link to="/projects">
-                <Button className="w-full">Learn More</Button>
-              </Link>
+          {featuredProjects.map((project, index) => (
+            <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+              <img
+                src={project.imageUrl}
+                alt={project.altText}
+                width={400}
+                height={200}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-indigo-600 dark:text-indigo-400">{project.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
+                <Link to={project.link}>
+                  <Button className="w-full">{project.buttonText}</Button>
+                </Link>
+              </div>
             </div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
-            <img
-              src="/placeholder.svg"
-              alt="Project 2"
-              width={400}
-              height={200}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2 text-indigo-600 dark:text-indigo-400">AI Study Assistant</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">An AI-powered tool to help students organize and optimize their study sessions.</p>
-              <Link to="/projects">
-                <Button className="w-full">Learn More</Button>
-              </Link>
-            </div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
-            <img
-              src="/placeholder.svg"
-              alt="Project 3"
-              width={400}
-              height={200}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2 text-indigo-600 dark:text-indigo-400">Eco Tracker</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">A mobile app for tracking and reducing personal carbon footprint.</p>
-              <Link to="/projects">
-                <Button className="w-full">Learn More</Button>
-              </Link>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default FeaturedProject
+export default FeaturedProject;
