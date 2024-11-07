@@ -10,7 +10,6 @@ import { MapPin, Phone, Mail } from 'lucide-react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import MapComponent from '../components/MapComponent'
-import { sendEmail } from '../../lib/sendMail'
 import { toast } from 'sonner'
 
 const formSchema = z.object({
@@ -35,14 +34,9 @@ const ContactPage = () => {
     },
   })
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    const response = await sendEmail(values.email, values.message)
-    form.reset();
-    if ((response.data as { error: boolean }).error) {
-      toast.error('Failed to send message. Please try again later.')
-    } else {
-      toast.success('Message sent successfully.')
-    }
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log(values)
+    toast.error("This feature is not available yet.")
   }
 
   return (
