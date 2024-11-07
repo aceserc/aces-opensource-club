@@ -9,6 +9,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../sh
 import { MapPin, Phone, Mail } from 'lucide-react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import MapComponent from '../components/MapComponent'
+import { sendEmail } from '../../lib/sendMail'
+import { toast } from 'sonner'
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -32,8 +35,14 @@ const ContactPage = () => {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values)
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    const response = await sendEmail(values.email, values.message)
+    form.reset();
+    if ((response.data as { error: boolean }).error) {
+      toast.error('Failed to send message. Please try again later.')
+    } else {
+      toast.success('Message sent successfully.')
+    }
   }
 
   return (
@@ -120,9 +129,9 @@ const ContactPage = () => {
                   <CardTitle>Location</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="aspect-video">
+                  {/* <div className="aspect-video">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d445.18447208857094!2d87.29232841343148!3d26.79297537791134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1730950385135!5m2!1sen!2snp"
+                      src="https://www.openstreetmap.org/export/embed.html?bbox=87.28868365287782%2C26.790507632262013%2C87.29576468467712%2C26.794817294110448&amp;layer=mapnik"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
@@ -130,7 +139,13 @@ const ContactPage = () => {
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
+                  </div> */}
+                  <div className="aspect-video">
+                    <MapComponent
+                      center={[26.792662, 87.292895]} />
+
                   </div>
+
                 </CardContent>
               </Card>
             </div>
@@ -144,3 +159,4 @@ const ContactPage = () => {
 
 export default ContactPage
 
+{/* <iframe width="425" height="350" src="" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=18/26.792662/87.292224">View Larger Map</a></small> */ }
