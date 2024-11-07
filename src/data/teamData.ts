@@ -14,43 +14,43 @@ export interface TeamMember {
 
 export const teamMembers: TeamMember[] = [
   {
-    name: "Alex Johnson",
+    name: "Sandip Sapkota",
     role: "President",
     image: "/image.webp",
-    description: "Alex leads our club with vision and dedication, ensuring we meet our goals.",
+    description: "Sandip leads our club with vision and dedication, ensuring we meet our goals.",
     socialLinks: {
-      github: "https://github.com/alexjohnson",
-      linkedin: "https://linkedin.com/in/alexjohnson",
-      twitter: "https://twitter.com/alexjohnson",
+      github: "https://github.com",
+      linkedin: "https://linkedin.com",
+      twitter: "https://twitter.com",
     }
   },
   {
-    name: "Samantha Lee",
+    name: "Tilak Thapa",
     role: "Vice President",
     image: "/image.webp",
-    description: "Samantha oversees our projects and helps coordinate our various initiatives.",
+    description: "Tilak oversees our projects and helps coordinate our various initiatives.",
     socialLinks: {
       github: "",
-      linkedin: "https://linkedin.com/in/samanthalee",
+      linkedin: "https://linkedin.com",
       twitter: "",
     }
   },
   {
-    name: "Michael Chen",
+    name: "Pujan Neupane",
     role: "Treasurer",
     image: "/image.webp",
-    description: "Michael manages our finances and ensures we have the resources for our activities.",
+    description: "Pujan manages our finances and ensures we have the resources for our activities.",
     socialLinks: {
       github: "",
-      linkedin: "https://linkedin.com/in/michaelchen",
+      linkedin: "https://linkedin.com",
       twitter: "",
     }
   },
   {
-    name: "Emily Rodriguez",
+    name: "Arun Aryal",
     role: "Events Coordinator",
     image: "/image.webp",
-    description: "Emily brings creativity and energy to our event planning and execution.",
+    description: "Arun brings creativity and energy to our event planning and execution.",
     socialLinks: {
       github: "",
       linkedin: "",
@@ -58,10 +58,10 @@ export const teamMembers: TeamMember[] = [
     }
   },
   {
-    name: "David Okonkwo",
+    name: "Aarju Gautam",
     role: "Outreach Officer",
     image: "image.webp",
-    description: "David builds strong relationships with our community partners and stakeholders.",
+    description: "Aarju builds strong relationships with our community partners and stakeholders.",
     socialLinks: {
       github: "",
       linkedin: "",
@@ -69,12 +69,12 @@ export const teamMembers: TeamMember[] = [
     }
   },
   {
-    name: "Lisa Tanaka",
+    name: "Eron Panta",
     role: "Technology Lead",
     image: "/image.webp",
-    description: "Lisa keeps us at the forefront of technological advancements in our field.",
+    description: "Eron keeps us at the forefront of technological advancements in our field.",
     socialLinks: {
-      github: "https://github.com/lisatanaka",
+      github: "https://github.com",
       linkedin: "",
       twitter: "",
     }
