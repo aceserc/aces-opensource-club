@@ -5,7 +5,7 @@ import Header from "../components/Header";
 
 export default function ProgramPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900 dark:to-emerald-800">
+    <div className=" font-bricolage-grotesque flex flex-col min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900 dark:to-emerald-800">
       <Header />
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">

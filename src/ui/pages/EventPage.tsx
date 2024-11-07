@@ -63,7 +63,7 @@ const pastEvents: Event[] = [
 
 function EventCard({ event }: { event: Event }) {
   return (
-    <Card className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+    <Card className="bg-white dark:bg-gray-800 font-bricolage-grotesque rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
       <CardContent className="p-6">
         <div className="flex justify-between items-start mb-4">
           <h3 className="text-xl font-semibold text-indigo-600 dark:text-indigo-400">{event.title}</h3>

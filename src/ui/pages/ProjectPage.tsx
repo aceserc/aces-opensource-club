@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function ProjectsPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-indigo-950">
+    <div className="flex font-bricolage-grotesque flex-col min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-indigo-950">
       <Header />
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
